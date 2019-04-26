@@ -1,14 +1,10 @@
 apply plugin: 'com.android.library'
 
 android {
-    compileSdkVersion 28
-
-
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
     defaultConfig {
-        minSdkVersion 15
-        targetSdkVersion 28
-        versionCode 1
-        versionName "1.0"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
         javaCompileOptions {
             annotationProcessorOptions {
@@ -35,4 +31,7 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.alibaba:arouter-api:1.4.1'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
+    implementation project(path: ':module_base')
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 }

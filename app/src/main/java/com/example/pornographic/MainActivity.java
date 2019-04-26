@@ -1,13 +1,28 @@
 package com.example.pornographic;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class MainActivity extends AppCompatActivity {
+import android.annotation.SuppressLint;
+
+import com.example.module_base.base.BaseActivity;
+
+/**
+ * @author Xuyijie
+ */
+@SuppressLint("Registered")
+public class MainActivity extends BaseActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+    public int initActivityLayout() {
+        return R.layout.activity_main;
+    }
+
+    @Override
+    public void initView() {
+
+    }
+
+    @Override
+    public void initData() {
+
     }
 }
