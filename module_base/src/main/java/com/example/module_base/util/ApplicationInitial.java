@@ -19,7 +19,7 @@ import cn.jpush.android.api.JPushInterface;
  */
 public class ApplicationInitial {
     public ApplicationInitial initBmob() {
-        Bmob.initialize(App.getInstance(), "2a33abea32080fbb53b6103a504347ec");
+        Bmob.initialize(App.getInstance(), "edb0f1f78b373a039a80d1bcc071fda4");
         return this;
     }
 
