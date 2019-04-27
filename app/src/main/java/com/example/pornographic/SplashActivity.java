@@ -13,9 +13,7 @@ import com.example.module_base.util.GlideUtil;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 
-/**
- * @author Xuyijie
- */
+
 public class SplashActivity extends BaseActivity {
 
 

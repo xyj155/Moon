@@ -39,6 +39,7 @@ dependencies {
     implementation project(path: ':module_base')
     implementation project(path: ':module_video')
     implementation project(path: ':module_home')
+    implementation project(path: ':module_member')
     implementation 'com.jakewharton:butterknife:8.8.1'
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
 

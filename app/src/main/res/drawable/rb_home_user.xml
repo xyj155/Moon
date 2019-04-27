@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
-<item android:drawable="@mipmap/home_user_normal" android:state_checked="false"/>
-<item android:drawable="@mipmap/home_user_selected" android:state_checked="true"/>
+<item android:drawable="@mipmap/home_foot_tab_my_normal" android:state_checked="false"/>
+<item android:drawable="@mipmap/home_foot_tab_my_selected" android:state_checked="true"/>
 </selector>

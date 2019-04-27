@@ -14,19 +14,19 @@ import com.example.module_base.base.BaseActivity;
 import com.example.module_base.util.SharePreferenceUtil;
 import com.example.module_home.HomeFragment;
 import com.example.module_home2.VideoFragment;
+import com.example.module_member.FragmentMember;
 import com.example.module_search.SearchFragment;
 import com.example.module_user.UserFragment;
 
 import cn.bmob.v3.BmobQuery;
 import cn.bmob.v3.exception.BmobException;
 
-/**
- * @author Xuyijie
- */
+
 @SuppressLint("Registered")
 public class MainActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
     private RadioButton rbHome;
     private RadioButton rbKind;
+    private RadioButton rbMember;
     private RadioButton rbShopcar;
     private RadioButton rbUser;
     private RadioGroup rgHome;
@@ -38,6 +38,7 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
     private Fragment kindFragment;
     private Fragment shopCarFragment;
     private Fragment userFragment;
+    private Fragment memberFragment;
 
 
     @Override
@@ -48,6 +49,7 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
     @Override
     public void initView() {
         rbHome = findViewById(R.id.rb_home);
+        rbMember = findViewById(R.id.rb_member);
         rbKind = findViewById(R.id.rb_kind);
         rbShopcar = findViewById(R.id.rb_shopcar);
         rbUser = findViewById(R.id.rb_user);
@@ -63,6 +65,7 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
         rbHome.setOnCheckedChangeListener(this);
         rbKind.setOnCheckedChangeListener(this);
         rbShopcar.setOnCheckedChangeListener(this);
+        rbMember.setOnCheckedChangeListener(this);
         rbUser.setOnCheckedChangeListener(this);
         rgHome.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -97,8 +100,16 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
                             transaction.show(shopCarFragment);
                         }
                         break;
+                    case R.id.rb_member:
+                        Log.i(TAG, "onCheckedChanged: 2");
+                        if (memberFragment == null) {
+                            memberFragment = new FragmentMember();
+                            transaction.add(R.id.flContainer, memberFragment);
+                        } else {
+                            transaction.show(memberFragment);
+                        }
+                        break;
                     case R.id.rb_user:
-
                         Log.i(TAG, "onCheckedChanged: 1");
                         if (userFragment == null) {
                             userFragment = new UserFragment();
@@ -128,6 +139,9 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
         }
         if (kindFragment != null) {
             transaction.hide(kindFragment);
+        }
+        if (memberFragment != null) {
+            transaction.hide(memberFragment);
         }
         if (shopCarFragment != null) {
             transaction.hide(shopCarFragment);
