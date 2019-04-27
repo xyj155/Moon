@@ -18,6 +18,7 @@ android {
                 JPUSH_APPKEY : "2d6ae189ad952e989b91b014", //JPush 上注册的包名对应的 Appkey.
                 JPUSH_CHANNEL: "developer-default", //暂时填写默认值即可.
         ]
+        multiDexEnabled true //设置multiDex模式
     }
     buildTypes {
         release {

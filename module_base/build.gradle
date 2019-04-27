@@ -11,6 +11,7 @@ android {
                 arguments = [AROUTER_MODULE_NAME: project.getName()]
             }
         }
+        multiDexEnabled true //设置multiDex模式
     }
 
     buildTypes {
@@ -41,8 +42,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-    implementation 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     api 'com.github.dueeeke.dkplayer:dkplayer-java:2.5.7'
     api 'com.github.dueeeke.dkplayer:dkplayer-armv7a:2.5.7'
     api 'com.github.dueeeke.dkplayer:dkplayer-armv5:2.5.7'
