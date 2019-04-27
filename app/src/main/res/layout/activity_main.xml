@@ -58,7 +58,7 @@
             android:drawableTop="@drawable/rb_home_member"
             android:drawablePadding="2dp"
             android:gravity="center"
-            android:text="自拍"
+            android:text="会员"
             android:textSize="10sp" />
 
         <RadioButton
