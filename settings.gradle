@@ -1,1 +1,1 @@
-include ':app', ':module_home', ':module_video', ':module_search', ':module_user', ':module_base', ':module_member'
+include ':app', ':module_home', ':module_search', ':module_user', ':module_base', ':module_member', ':module_video'

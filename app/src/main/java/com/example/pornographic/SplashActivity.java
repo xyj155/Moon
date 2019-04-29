@@ -8,6 +8,7 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.example.module_base.base.BaseActivity;
+import com.example.module_base.base.VideoPlayerActivity;
 import com.example.module_base.util.GlideUtil;
 
 import butterknife.BindView;

@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
+    android:id="@+id/rl_video"
     android:background="#ffffff"
     android:paddingBottom="@dimen/dp_5"
     android:layout_margin="@dimen/dp_1.5">

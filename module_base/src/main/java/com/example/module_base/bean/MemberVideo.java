@@ -3,17 +3,17 @@ package com.example.module_base.bean;
 import cn.bmob.v3.BmobObject;
 
 public class MemberVideo extends BmobObject {
-    private String viewPlayUrl;
+    private String videoPlayUrl;
     private String videoPictureUrl;
     private String videoDuration;
     private String kind;
 
-    public String getViewPlayUrl() {
-        return viewPlayUrl;
+    public String getVideoPlayUrl() {
+        return videoPlayUrl;
     }
 
-    public void setViewPlayUrl(String viewPlayUrl) {
-        this.viewPlayUrl = viewPlayUrl;
+    public void setVideoPlayUrl(String videoPlayUrl) {
+        this.videoPlayUrl = videoPlayUrl;
     }
 
     public String getVideoPictureUrl() {

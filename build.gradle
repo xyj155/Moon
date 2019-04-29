@@ -1,14 +1,17 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 apply from: "versionController.gradle"
-
 buildscript {
     repositories {
         google()
         jcenter()
-
+        maven { url "https://raw.github.com/bmob/bmob-android-sdk/master" }
+        maven { url "http://repo1.maven.org/maven2" }
+        maven { url 'https://jitpack.io' }
+        maven { url "https://dl.bintray.com/dqzhai/payelves-maven" }
+        maven{ url 'https://maven.aliyun.com/repository/google'}
     }
     dependencies {
-        classpath 'com.android.tools.build:gradle:3.3.1'
+        classpath 'com.android.tools.build:gradle:3.3.0'
         classpath "com.alibaba:arouter-register:1.0.2"
         classpath 'com.jakewharton:butterknife-gradle-plugin:9.0.0-rc2'
         classpath 'com.neenbedankt.gradle.plugins:android-apt:1.8'
@@ -25,6 +28,7 @@ allprojects {
         maven { url "http://repo1.maven.org/maven2" }
         maven { url 'https://jitpack.io' }
         maven { url "https://dl.bintray.com/dqzhai/payelves-maven" }
+        maven{ url 'https://maven.aliyun.com/repository/google'}
     }
 }
 

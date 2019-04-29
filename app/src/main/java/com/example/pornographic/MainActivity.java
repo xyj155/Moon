@@ -2,6 +2,8 @@ package com.example.pornographic;
 
 
 import android.annotation.SuppressLint;
+
+
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
@@ -11,15 +13,11 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.module_base.base.BaseActivity;
-import com.example.module_base.util.SharePreferenceUtil;
 import com.example.module_home.HomeFragment;
-import com.example.module_home2.VideoFragment;
+import com.example.module_video.VideoFragment;
 import com.example.module_member.FragmentMember;
 import com.example.module_search.SearchFragment;
 import com.example.module_user.UserFragment;
-
-import cn.bmob.v3.BmobQuery;
-import cn.bmob.v3.exception.BmobException;
 
 
 @SuppressLint("Registered")

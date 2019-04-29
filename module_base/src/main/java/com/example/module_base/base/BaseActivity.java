@@ -4,6 +4,8 @@ package com.example.module_base.base;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+
 import android.support.v7.app.AppCompatActivity;
 import android.util.DisplayMetrics;
 import android.view.Display;
@@ -12,13 +14,15 @@ import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+
+
 import com.example.module_base.R;
 import com.example.module_base.util.StatusBarUtil;
 
 import java.util.ArrayList;
 
 public abstract class BaseActivity extends AppCompatActivity {
-
+    private static final String TAG = BaseActivity.class.getPackage().getName();
 
     ArrayList<Activity> activities = new ArrayList<Activity>();
 

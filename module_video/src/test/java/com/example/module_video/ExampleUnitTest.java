@@ -1,4 +1,4 @@
-package com.example.module_home2;
+package com.example.module_video;
 
 import org.junit.Test;
 

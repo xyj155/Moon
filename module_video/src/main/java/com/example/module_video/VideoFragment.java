@@ -1,6 +1,8 @@
-package com.example.module_home2;
+package com.example.module_video;
 
 import android.view.View;
+
+
 
 import com.example.module_base.base.BaseFragment;
 

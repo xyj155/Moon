@@ -1,6 +1,8 @@
 package com.example.module_member.vpfragment;
 
 import android.os.Bundle;
+
+
 import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -54,7 +56,7 @@ public class MemberBaseVideoFragment extends BaseFragment {
     @Override
     public void initView(View view) {
         unbinder = ButterKnife.bind(this, view);
-        memberAdapter = new MemberAdapter(memberVideoList);
+        memberAdapter = new MemberAdapter(memberVideoList,getContext());
     }
 
     private List<MemberVideo> memberVideoList = new ArrayList<>();
