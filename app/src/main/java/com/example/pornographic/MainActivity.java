@@ -2,33 +2,45 @@ package com.example.pornographic;
 
 
 import android.annotation.SuppressLint;
-
-
+import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
 import android.widget.CompoundButton;
+import android.widget.FrameLayout;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 
 import com.example.module_base.base.BaseActivity;
 import com.example.module_home.HomeFragment;
-import com.example.module_video.VideoFragment;
 import com.example.module_member.FragmentMember;
 import com.example.module_search.SearchFragment;
 import com.example.module_user.UserFragment;
+import com.example.module_video.VideoFragment;
+
+import butterknife.BindView;
+import butterknife.ButterKnife;
 
 
 @SuppressLint("Registered")
 public class MainActivity extends BaseActivity implements CompoundButton.OnCheckedChangeListener {
-    private RadioButton rbHome;
-    private RadioButton rbKind;
-    private RadioButton rbMember;
-    private RadioButton rbShopcar;
-    private RadioButton rbUser;
-    private RadioGroup rgHome;
+
     private static final String TAG = "MainActivity";
+    @BindView(R.id.flContainer)
+    FrameLayout flContainer;
+    @BindView(R.id.rb_home)
+    RadioButton rbHome;
+    @BindView(R.id.rb_video)
+    RadioButton rbVideo;
+    @BindView(R.id.rb_member)
+    RadioButton rbMember;
+    @BindView(R.id.rb_search)
+    RadioButton rbSearch;
+    @BindView(R.id.rb_user)
+    RadioButton rbUser;
+    @BindView(R.id.rg_home)
+    RadioGroup rgHome;
 
 
     private FragmentManager supportFragmentManager;
@@ -46,23 +58,18 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
 
     @Override
     public void initView() {
-        rbHome = findViewById(R.id.rb_home);
-        rbMember = findViewById(R.id.rb_member);
-        rbKind = findViewById(R.id.rb_kind);
-        rbShopcar = findViewById(R.id.rb_shopcar);
-        rbUser = findViewById(R.id.rb_user);
-        rgHome = findViewById(R.id.rg_home);
+
     }
 
     @Override
     public void initData() {
-
+        ButterKnife.bind(this);
         supportFragmentManager = getSupportFragmentManager();
         rbHome.setChecked(true);
         showFirstPosition();
         rbHome.setOnCheckedChangeListener(this);
-        rbKind.setOnCheckedChangeListener(this);
-        rbShopcar.setOnCheckedChangeListener(this);
+        rbSearch.setOnCheckedChangeListener(this);
+        rbVideo.setOnCheckedChangeListener(this);
         rbMember.setOnCheckedChangeListener(this);
         rbUser.setOnCheckedChangeListener(this);
         rgHome.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
@@ -80,7 +87,7 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
                             transaction.show(homeFragment);
                         }
                         break;
-                    case R.id.rb_kind:
+                    case R.id.rb_video:
                         Log.i(TAG, "onCheckedChanged:3 ");
                         if (kindFragment == null) {
                             kindFragment = new VideoFragment();
@@ -89,7 +96,7 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
                             transaction.show(kindFragment);
                         }
                         break;
-                    case R.id.rb_shopcar:
+                    case R.id.rb_search:
                         Log.i(TAG, "onCheckedChanged: 2");
                         if (shopCarFragment == null) {
                             shopCarFragment = new SearchFragment();
@@ -151,6 +158,13 @@ public class MainActivity extends BaseActivity implements CompoundButton.OnCheck
 
     @Override
     public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        // TODO: add setContentView(...) invocation
 
     }
 }

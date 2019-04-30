@@ -1,21 +1,81 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-
-    <net.lucode.hackware.magicindicator.MagicIndicator
-        android:id="@+id/mg_title"
+    <!--包裹头部View实现滑动效果-->
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_48" />
+        android:layout_height="wrap_content"
+        app:elevation="@dimen/dp_0"
+        android:theme="@style/ThemeOverlay.AppCompat">
 
-    <com.example.module_home.weight.CustomViewPager
-        android:id="@+id/vp_home"
+        <!--标题栏-->
+        <RelativeLayout
+            android:id="@+id/tb_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_85"
+            android:background="#ff3000"
+            android:paddingTop="@dimen/dp_35">
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="@dimen/dp_12"
+                android:layout_toLeftOf="@+id/ll_menu"
+                android:background="@drawable/home_search_bg"
+                android:drawableLeft="@mipmap/ic_search"
+                android:padding="@dimen/dp_8"
+                android:text="搜索你想看的片" />
+
+            <LinearLayout
+                android:padding="@dimen/dp_8"
+                android:id="@+id/ll_menu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_file"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:src="@mipmap/wenjian" />
+
+                <ImageView
+                    android:id="@+id/iv_download"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:src="@mipmap/xiazai" />
+
+                <ImageView
+                    android:id="@+id/iv_history"
+                    android:layout_width="@dimen/dp_20"
+                    android:layout_height="@dimen/dp_20"
+                    android:layout_marginLeft="@dimen/dp_8"
+                    android:layout_marginRight="@dimen/dp_8"
+                    android:src="@mipmap/lishi" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <net.lucode.hackware.magicindicator.MagicIndicator
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_55" />
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_tab_pager"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
-</LinearLayout>
+</android.support.design.widget.CoordinatorLayout>

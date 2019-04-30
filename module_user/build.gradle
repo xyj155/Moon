@@ -46,7 +46,7 @@ android {
     }
     sourceSets {
         main {
-            if (isNeedModuleUser.toBoolean()) {
+            if (isNeedModuleSearch.toBoolean()) {
                 //组件化编译时为app，在对应的AndroidManifest文件中需要写ndroid.intent.action.MAIN入口Activity
                 manifest.srcFile 'src/main/module/AndroidManifest.xml'
             } else {
@@ -60,12 +60,13 @@ android {
         }
     }
 }
-
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.jakewharton:butterknife:8.8.1'
+    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    testImplementation 'junit:junit:4.12'
     implementation 'com.alibaba:arouter-api:1.4.1'
     annotationProcessor 'com.alibaba:arouter-compiler:1.2.2'
-    implementation project(':module_base')
-    api 'com.jakewharton:butterknife:8.8.1'
-    annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
+    implementation project(path: ':module_base')
+    //noinspection GradleCompatible
+
 }

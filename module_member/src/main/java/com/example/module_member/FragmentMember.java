@@ -2,8 +2,6 @@ package com.example.module_member;
 
 import android.content.Context;
 import android.graphics.Color;
-
-
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
@@ -44,7 +42,7 @@ public class FragmentMember extends BaseFragment {
     @BindView(R2.id.vp_member)
     ViewPager vpMember;
     Unbinder unbinder;
-    private String[] titles = {"精选", "自拍", "欧美", "日本", "SM", "动漫", "高清", "三级", "无码", "4K"};
+    private String[] titles = {"精选", "自拍", "欧美", "日韩", "SM", "动漫", "高清", "三级", "无码", "4K"};
     private List<Fragment> fragmentList = new ArrayList<>();
     private BaseFragmentPagerAdapter baseFragmentPagerAdapter;
 
@@ -62,7 +60,7 @@ public class FragmentMember extends BaseFragment {
 
     private void initViewPager() {
         fragmentList.add(new PurseFragment());
-        for (int i = 1; i < titles.length ; i++) {
+        for (int i = 1; i < titles.length; i++) {
             MemberBaseVideoFragment memberBaseVideoFragment = new MemberBaseVideoFragment();
             memberBaseVideoFragment.setTitle(titles[i]);
             fragmentList.add(memberBaseVideoFragment);

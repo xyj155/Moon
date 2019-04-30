@@ -43,7 +43,6 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(initActivityLayout());
-        StatusBarUtil.setStatusBarTextColor(this);
         StatusBarUtil.setStatusBarTranslucent(this);
         WindowManager manager = getWindowManager();
         Display display = manager.getDefaultDisplay();
@@ -54,7 +53,6 @@ public abstract class BaseActivity extends AppCompatActivity {
         addActivity();
         initView();
         initData();
-
     }
 
     public BaseActivity initToolbar(String title) {

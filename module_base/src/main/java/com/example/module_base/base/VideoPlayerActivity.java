@@ -3,6 +3,7 @@ package com.example.module_base.base;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.example.module_base.R;
 import com.example.module_base.util.GlideUtil;
@@ -16,6 +17,8 @@ public class VideoPlayerActivity extends BaseActivity {
 
 
     VideoPlayer videoPlayer;
+    TextView tvTitle;
+    TextView tvInformation;
 
     @Override
     public int initActivityLayout() {
@@ -23,16 +26,22 @@ public class VideoPlayerActivity extends BaseActivity {
     }
 
     private static final String TAG = "VideoPlayerActivity";
+
     @Override
     public void initView() {
         videoPlayer = findViewById(R.id.video_player);
+        tvTitle = findViewById(R.id.tv_title);
+        tvInformation = findViewById(R.id.tv_information);
         String videoUrl = getIntent().getStringExtra("url");
-        Log.i(TAG, "initView: "+videoUrl);
+        Log.i(TAG, "initView: " + videoUrl);
         videoPlayer.setUp(videoUrl, null);
+        tvTitle.setText(getIntent().getStringExtra("title"));
+        tvInformation.setText(getIntent().getStringExtra("kind")+" | "+getIntent().getStringExtra("time").substring(0,10));
         VideoPlayerController controller = new VideoPlayerController(this);
-        controller.setTitle("自定义视频播放器可以播放视频拉");
+        controller.setTitle(getIntent().getStringExtra("title"));
+        controller.setLength(getIntent().getStringExtra("duration"));
         ImageView imageView = controller.imageView();
-        GlideUtil.BaseGlide(getIntent().getStringExtra("picture"),imageView);
+        GlideUtil.BaseGlide(getIntent().getStringExtra("picture"), imageView);
         videoPlayer.setController(controller);
     }
 
