@@ -54,6 +54,8 @@
             </intent-filter>
         </activity>
         <activity android:name="io.github.xudaojie.qrcodelib.CaptureActivity" />
+        <activity android:name="com.example.module_home.view.WebViewActivity"/>
+        <activity android:name="com.example.module_home.view.VideoPlayerActivity"/>
 
         <provider
             android:name="cn.bmob.v3.util.BmobContentProvider"

@@ -1,20 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <TextView
-        android:id="@+id/tv_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:background="@color/e_white">
 
     <net.lucode.hackware.magicindicator.MagicIndicator
         android:id="@+id/mg_title"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_48" />
+        android:layout_height="@dimen/dp_40" />
 
     <com.example.module_home.weight.CustomViewPager
-        android:id="@+id/vp_home"
+        android:id="@+id/mCustomViewPager"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
