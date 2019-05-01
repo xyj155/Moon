@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginTop="@dimen/dp_20"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -38,7 +37,7 @@
 
 
         <RadioButton
-            android:id="@+id/rb_shopcar"
+            android:id="@+id/rb_video"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -62,7 +61,7 @@
             android:textSize="10sp" />
 
         <RadioButton
-            android:id="@+id/rb_kind"
+            android:id="@+id/rb_search"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"

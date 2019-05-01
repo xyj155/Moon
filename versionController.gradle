@@ -3,7 +3,7 @@ ext {
             compileSdkVersion: 28,
             buildToolsVersion: '28.0.2',
             applicationId    : "com.example.pornographic",
-            minSdkVersion    : 17,
+            minSdkVersion    : 19,
             targetSdkVersion : 28,
             versionCode      : 15,
             versionName      : "5.0.0"

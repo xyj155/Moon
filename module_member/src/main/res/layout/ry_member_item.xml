@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    android:paddingBottom="@dimen/dp_5"
+    android:layout_margin="@dimen/dp_1.5">
+
+    <ImageView
+        android:id="@+id/iv_cover"
+        android:layout_width="match_parent"
+        android:scaleType="fitXY"
+        android:layout_height="@dimen/dp_100" />
+
+    <TextView
+        android:id="@+id/tv_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_title"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/dp_4"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:background="@drawable/video_duration_bg"
+        android:paddingLeft="@dimen/dp_4"
+        android:paddingTop="@dimen/dp_2"
+        android:paddingRight="@dimen/dp_4"
+        android:paddingBottom="@dimen/dp_2"
+        android:text="00:00"
+        android:textColor="#fff"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_marginLeft="@dimen/dp_4"
+        android:layout_marginRight="@dimen/dp_4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_cover"
+        android:ellipsize="end"
+        android:maxLines="1"
+
+        android:paddingTop="@dimen/dp_2"
+        android:paddingBottom="@dimen/dp_2"
+        android:text="测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试测试"
+        android:textColor="#000" />
+</RelativeLayout>

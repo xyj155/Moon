@@ -8,6 +8,7 @@
         <attr name="civ_fill_color" format="color" />
         <attr name="civ_circle_background_color" format="color" />
     </declare-styleable>
+
     <style name="AppDialog" parent="android:Theme.Dialog">
         <item name="android:windowFrame">@null</item> <!--边框-->
         <item name="android:windowIsFloating">true</item> <!--是否浮现在activity之上-->
@@ -18,4 +19,10 @@
         <item name="android:backgroundDimEnabled">true</item> <!--模糊-->
         <item name="android:backgroundDimAmount">0.6</item>  <!--背景透明度-->
     </style>
+
+    <declare-styleable name="ObservableScrollView">
+        <attr name="zoomId" format="reference|integer" />
+        <attr name="maxZoom" format="dimension" />
+    </declare-styleable>
+
 </resources>
